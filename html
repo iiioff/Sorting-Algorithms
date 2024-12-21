@@ -10,40 +10,59 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
             background-color: #f4f4f4;
         }
         #container {
             width: 80%;
-            height: 80%;
+            height: 50%;
             display: flex;
             align-items: flex-end;
             justify-content: center;
             gap: 2px;
+            margin-bottom: 20px;
         }
         .bar {
             width: 5px;
             background-color: #4CAF50;
             transition: all 0.1s ease;
         }
-        #newArrayBtn {
-            position: absolute;
-            top: 20px;
+        button {
             padding: 10px 20px;
+            margin: 5px;
             background-color: #3498db;
             color: white;
             border: none;
             cursor: pointer;
+            font-size: 16px;
         }
-        #newArrayBtn:hover {
+        button:hover {
             background-color: #2980b9;
+        }
+        #buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
     </style>
 </head>
 <body>
-    <button id="newArrayBtn">Generate New Array</button>
+
+    <!-- Buttons to control the algorithms -->
+    <div id="buttons">
+        <button id="newArrayBtn">Generate New Array</button>
+        <button id="bubbleSortBtn">Bubble Sort</button>
+        <button id="insertionSortBtn">Insertion Sort</button>
+        <button id="mergeSortBtn">Merge Sort</button>
+        <button id="quickSortBtn">Quick Sort</button>
+        <button id="heapSortBtn">Heap Sort</button>
+        <button id="radixSortBtn">Radix Sort</button>
+    </div>
+
+    <!-- Container for the bars -->
     <div id="container"></div>
 
     <script src="sortingVisualizer.js"></script>
